@@ -21,7 +21,7 @@ copy .env.example .env   # then fill in real values (never commit .env)
 
 ## API docs
 
-With the server running: Swagger UI at http://localhost:8000/docs, ReDoc at http://localhost:8000/redoc, health check at http://localhost:8000/api/v1/health.
+With the server running: Swagger UI at http://localhost:8000/docs, ReDoc at http://localhost:8000/redoc, health check at http://localhost:8000/health.
 
 ## Layout
 
@@ -29,6 +29,10 @@ With the server running: Swagger UI at http://localhost:8000/docs, ReDoc at http
 src/claimpulse/   application package (feature-oriented)
   main.py         FastAPI app factory
   config.py       settings from env (.env, .env.local)
-  api/            routers
+  api/            routers (auth, users, payers, patients, claims, dashboard, lookups, health)
+  schemas/        Pydantic request/response models
+  services/       business rules (claim status lifecycle, dashboard queries)
+  models.py       SQLAlchemy models for the existing tables
+  errors.py       single error envelope {error: {code, message, requestId}}
 tests/            pytest suite
 ```

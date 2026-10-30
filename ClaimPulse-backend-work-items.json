@@ -1,24 +1,82 @@
 {
   "project": "ClaimPulse Backend",
-  "statusValues": ["todo", "in_progress", "done"],
+  "statusValues": [
+    "todo",
+    "in_progress",
+    "done"
+  ],
   "note": "A task is set to 'done' only after the user explicitly confirms it as verified.",
   "tasks": [
     {
       "id": 1,
       "title": "Set up FastAPI project with Swagger UI, ready for building APIs",
       "description": "App factory, settings from env, CORS, /api/v1/health router, Swagger UI at /docs, tests.",
-      "status": "in_progress"
+      "status": "done"
     },
     {
       "id": 2,
       "title": "Fix 404 Not Found on http://127.0.0.1:8000/ (redirect root to Swagger UI)",
       "description": "Root path had no route; added redirect from / to /docs.",
-      "status": "in_progress"
+      "status": "done"
     },
     {
       "id": 3,
       "title": "Add requirements.txt (FastAPI, SQLAlchemy, Alembic, pydantic, auth libs) and install it",
       "description": "Pinned dependencies saved in requirements.txt and installed into .venv.",
+      "status": "done"
+    },
+    {
+      "id": 4,
+      "title": "Auth APIs (register, login with JWT, current user) - code shared in chat for the user to implement themselves",
+      "description": "POST /api/v1/auth/register, POST /api/v1/auth/login, GET /api/v1/auth/me using SQLAlchemy, bcrypt and PyJWT.",
+      "status": "in_progress"
+    },
+    {
+      "id": 5,
+      "title": "Auth APIs: POST /auth/login, GET /auth/me, POST /auth/users (JWT + bcrypt, error envelope, request id)",
+      "description": "Built per the API documentation; automated tests pass, awaiting manual Swagger verification.",
+      "status": "in_progress"
+    },
+    {
+      "id": 6,
+      "title": "User management APIs: GET /users, PATCH /users/{id} (Admin only, cannot modify self)",
+      "description": "Built per the API documentation; automated tests pass, awaiting manual Swagger verification.",
+      "status": "in_progress"
+    },
+    {
+      "id": 7,
+      "title": "Payer APIs: GET/POST/PUT/DELETE /payers (read for all, write for Admin, 409 when payer has claims)",
+      "description": "Built per the API documentation; automated tests pass, awaiting manual Swagger verification.",
+      "status": "in_progress"
+    },
+    {
+      "id": 8,
+      "title": "Patient APIs: GET (search, pagination), POST, GET one with claims summary, PUT, DELETE (Admin) /patients",
+      "description": "Built per the API documentation; automated tests pass, awaiting manual Swagger verification.",
+      "status": "in_progress"
+    },
+    {
+      "id": 9,
+      "title": "Claim APIs: GET (filters, search, sort, pagination), POST, GET one, PUT, DELETE (Admin) /claims",
+      "description": "Built per the API documentation; automated tests pass, awaiting manual Swagger verification.",
+      "status": "in_progress"
+    },
+    {
+      "id": 10,
+      "title": "Claim status API: PATCH /claims/{id}/status with lifecycle rules and specific error codes",
+      "description": "Built per the API documentation; automated tests pass, awaiting manual Swagger verification.",
+      "status": "in_progress"
+    },
+    {
+      "id": 11,
+      "title": "Dashboard APIs: GET /dashboard/summary, /dashboard/payers, /dashboard/denial-reasons",
+      "description": "Built per the API documentation; automated tests pass, awaiting manual Swagger verification.",
+      "status": "in_progress"
+    },
+    {
+      "id": 12,
+      "title": "Lookups API: GET /lookups",
+      "description": "Built per the API documentation; automated tests pass, awaiting manual Swagger verification.",
       "status": "in_progress"
     }
   ]

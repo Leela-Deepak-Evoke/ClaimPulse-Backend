@@ -1,4 +1,4 @@
-# ===== ClaimPulse backend — Python dependencies =====
+=# ===== ClaimPulse backend — Python dependencies =====
 # Install:  pip install -r requirements.txt
 
 # Web framework + server
@@ -7,7 +7,7 @@ uvicorn[standard]==0.54.0
 
 # Database (PostgreSQL) + ORM + migrations
 sqlalchemy==2.1.4
-psycopg2-binary==2.9.13
+psycopg[binary]==3.3.6
 alembic==1.20.0
 
 # Validation + settings from .env
