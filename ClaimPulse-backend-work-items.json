@@ -1,0 +1,25 @@
+{
+  "project": "ClaimPulse Backend",
+  "statusValues": ["todo", "in_progress", "done"],
+  "note": "A task is set to 'done' only after the user explicitly confirms it as verified.",
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Set up FastAPI project with Swagger UI, ready for building APIs",
+      "description": "App factory, settings from env, CORS, /api/v1/health router, Swagger UI at /docs, tests.",
+      "status": "in_progress"
+    },
+    {
+      "id": 2,
+      "title": "Fix 404 Not Found on http://127.0.0.1:8000/ (redirect root to Swagger UI)",
+      "description": "Root path had no route; added redirect from / to /docs.",
+      "status": "in_progress"
+    },
+    {
+      "id": 3,
+      "title": "Add requirements.txt (FastAPI, SQLAlchemy, Alembic, pydantic, auth libs) and install it",
+      "description": "Pinned dependencies saved in requirements.txt and installed into .venv.",
+      "status": "in_progress"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# ===== ClaimPulse backend — Python dependencies =====
+# Install:  pip install -r requirements.txt
+
+# Web framework + server
+fastapi==0.143.2
+uvicorn[standard]==0.54.0
+
+# Database (PostgreSQL) + ORM + migrations
+sqlalchemy==2.1.4
+psycopg2-binary==2.9.13
+alembic==1.20.0
+
+# Validation + settings from .env
+pydantic==2.14.1
+pydantic-settings==2.16.0
+email-validator==2.3.0
+python-dotenv==1.2.4
+
+# Authentication (login, JWT, password hashing)
+bcrypt==5.0.0
+PyJWT==2.15.1
+python-multipart==0.0.32
